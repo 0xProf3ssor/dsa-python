@@ -32,7 +32,7 @@ This repository serves as a personal log of my progress in mastering DSA concept
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/0xProf3ssor/dsa-python.git
    ```
 
 2. Explore the folders for solutions or notes.
