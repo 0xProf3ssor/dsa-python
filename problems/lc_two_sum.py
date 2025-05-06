@@ -37,6 +37,8 @@ We can iterate through the array and for each number, we can check if the comple
 If it does, we return the indices of the current number and the complement. If it doesn't, we add the current number and its index to the hash map.
 """
 
+from loguru import logger
+
 
 class Solution(object):
     def twoSum(self, nums, target):
@@ -49,16 +51,28 @@ class Solution(object):
             map[num] = i
 
 
+solution = Solution()
+
+
 def test_case_1():
-    solution = Solution()
-    assert solution.twoSum([2, 7, 11, 15], 9) == [1, 0]
+    logger.info("Running test case 1")
+    assert solution.twoSum([2, 7, 11, 15], 9) == [1, 0], (
+        f"Expected [0, 1] but got {solution.twoSum([2, 7, 11, 15], 9)}"
+    )
+    logger.success("Test case 1 passed")
 
 
 def test_case_2():
-    solution = Solution()
-    assert solution.twoSum([3, 2, 4], 6) == [2, 1]
+    logger.info("Running test case 2")
+    assert solution.twoSum([3, 2, 4], 6) == [2, 1], (
+        f"Expected [1, 2] but got {solution.twoSum([3, 2, 4], 6)}"
+    )
+    logger.success("Test case 2 passed")
 
 
 def test_case_3():
-    solution = Solution()
-    assert solution.twoSum([3, 3], 6) == [1, 0]
+    logger.info("Running test case 3")
+    assert solution.twoSum([3, 3], 6) == [1, 0], (
+        f"Expected [0, 1] but got {solution.twoSum([3, 3], 6)}"
+    )
+    logger.success("Test case 3 passed")
